@@ -7,6 +7,7 @@ name = "pypi"
 pdoc3 = "*"
 vcrpy = "*"
 pytest = "*"
+requests = "*"
 
 [dev-packages]
 
