@@ -1,0 +1,94 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - WMF-Last-Access=10-Jan-2023; WMF-Last-Access-Global=10-Jan-2023; GeoIP=US:NY:Brooklyn:40.71:-73.96:v4
+      User-Agent:
+      - Sarah Duve <saduve@gmail.com>
+    method: GET
+    uri: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/all-access/user/Pel%C3%A9/daily/20221201/20221231
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WXy23DMAyGd9E5LURSz07Re9GD4QiBWicNbKdBEGSgztHFKgNdgAL+o+iHPlvk
+        J+pu6lqOi3l5u5vz/PVRxtW8mHJ6vtbPei77OpidGea1jlNpF17L9PvTIod5OF2mYa7rrUX3Q51u
+        LbrWY1nW4XhuMbbMxJas3V4wjmVpk5hhmp7+By16KKdttstS5jb8ruXa7vGSJT92GBzW4wTOFoUj
+        ahzJmQKheJyah1P0SVA8Xs+zPZZQPEHNQ5LbV6B4oponiLew6kpqHEeJIwon61fLOiZU9jQVanky
+        EXkUToeavSQYDnckD2WHwtGr2cfsUKVFejOHQAz7O3oxu0iM2idI72VxPqLEQ3otO7EJljt6LVMK
+        waG6DOrwcgwcUebhDi9HEVQys97L0aWE6jFY7+VsM8w83OFlFz0ql1nv5Rg9MwpH72XiTLjS6miY
+        yXkJKJ7YwdMyDpbNHWpuFQlrUblDzRQ8WdSCie04cbXNNKPsLHo7i9+2vMf74w9V6PanbBEAAA==
+    headers:
+      accept-ch:
+      - Sec-CH-UA-Arch,Sec-CH-UA-Bitness,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-UA-Platform-Version
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - accept, content-type, content-length, cache-control, accept-language, api-user-agent,
+        if-match, if-modified-since, if-none-match, dnt, accept-encoding
+      access-control-allow-methods:
+      - GET,HEAD
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - etag
+      age:
+      - '8067'
+      cache-control:
+      - s-maxage=14400, max-age=14400
+      content-encoding:
+      - gzip
+      content-length:
+      - '397'
+      content-security-policy:
+      - default-src 'none'; frame-ancestors 'none'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 10 Jan 2023 14:00:24 GMT
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      permissions-policy:
+      - interest-cohort=(),ch-ua-arch=(self "intake-analytics.wikimedia.org"),ch-ua-bitness=(self
+        "intake-analytics.wikimedia.org"),ch-ua-full-version-list=(self "intake-analytics.wikimedia.org"),ch-ua-model=(self
+        "intake-analytics.wikimedia.org"),ch-ua-platform-version=(self "intake-analytics.wikimedia.org")
+      referrer-policy:
+      - origin-when-cross-origin
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server:
+      - restbase1022
+      server-timing:
+      - cache;desc="hit-front", host;desc="cp1081"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      vary:
+      - Accept-Encoding
+      x-cache:
+      - cp1087 miss, cp1081 hit/1
+      x-cache-status:
+      - hit-front
+      x-client-ip:
+      - 2603:7000:9103:9a7b:9479:a929:1625:9b34
+      x-content-security-policy:
+      - default-src 'none'; frame-ancestors 'none'
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-webkit-csp:
+      - default-src 'none'; frame-ancestors 'none'
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - WMF-Last-Access=10-Jan-2023; WMF-Last-Access-Global=10-Jan-2023; GeoIP=US:NY:Brooklyn:40.71:-73.96:v4
+      User-Agent:
+      - Sarah Duve <saduve@gmail.com>
+    method: GET
+    uri: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/all-access/user/Pel%C3%A9/daily/20150601/20150630
+  response:
+    body:
+      string: '{"type":"https://mediawiki.org/wiki/HyperSwitch/errors/not_found","title":"Not
+        found.","method":"get","detail":"The date(s) you used are valid, but we either
+        do not have data for those date(s), or the project you asked for is not loaded
+        yet.  Please check https://wikimedia.org/api/rest_v1/?doc for more information.","uri":"/analytics.wikimedia.org/v1/pageviews/per-article/en.wikipedia.org/all-access/user/Pel%C3%A9/daily/20150601/20150630"}'
+    headers:
+      accept-ch:
+      - Sec-CH-UA-Arch,Sec-CH-UA-Bitness,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-UA-Platform-Version
+      access-control-allow-headers:
+      - accept, content-type, content-length, cache-control, accept-language, api-user-agent,
+        if-match, if-modified-since, if-none-match, dnt, accept-encoding
+      access-control-allow-methods:
+      - GET,HEAD
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - etag
+      age:
+      - '0'
+      cache-control:
+      - private, max-age=0, s-maxage=0, must-revalidate
+      content-length:
+      - '443'
+      content-security-policy:
+      - default-src 'none'; frame-ancestors 'none'
+      content-type:
+      - application/problem+json
+      date:
+      - Tue, 10 Jan 2023 16:14:52 GMT
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      permissions-policy:
+      - interest-cohort=(),ch-ua-arch=(self "intake-analytics.wikimedia.org"),ch-ua-bitness=(self
+        "intake-analytics.wikimedia.org"),ch-ua-full-version-list=(self "intake-analytics.wikimedia.org"),ch-ua-model=(self
+        "intake-analytics.wikimedia.org"),ch-ua-platform-version=(self "intake-analytics.wikimedia.org")
+      referrer-policy:
+      - origin-when-cross-origin
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server:
+      - restbase1023
+      server-timing:
+      - cache;desc="pass", host;desc="cp1081"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp1089 miss, cp1081 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 2603:7000:9103:9a7b:9479:a929:1625:9b34
+      x-content-security-policy:
+      - default-src 'none'; frame-ancestors 'none'
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-webkit-csp:
+      - default-src 'none'; frame-ancestors 'none'
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 404
+      message: Not Found
+version: 1
