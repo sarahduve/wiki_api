@@ -1,0 +1,1240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>wiki_api.client API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>wiki_api.client</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from wiki_api.errors import WikiApiError
+import pdb
+
+from calendar import monthrange
+from collections import Counter
+from datetime import datetime, timedelta, date
+from typing import Tuple
+from urllib.parse import urlencode
+import json
+
+import requests
+from requests.utils import quote
+
+class WikiApiClient:
+
+    def __init__(self, user_agent=&#34;Sarah Duve &lt;saduve@gmail.com&gt;&#34;,
+                 hostname=&#34;wikimedia.org&#34;, version=&#34;rest_v1&#34;,
+                 project=&#34;en.wikipedia.org&#34;, access=&#34;all-access&#34;,
+                 agent=&#34;user&#34;, error_class=WikiApiError):
+
+        &#34;&#34;&#34;
+        Create a WikiApiClient
+
+        Args:
+            user_agent (str, optional): User-Agent string to use for HTTP requests. Should be
+                                        something that allows you to be contacted if
+                                        need be, see https://www.mediawiki.org/wiki/REST_API
+            hostname (str, optional):   Hostname of API being accessed
+            version (str, optional):    Version of API being accessed
+            project (str, optional):    The domain of any Wikimedia project, for example
+                                        &#39;en.wikipedia.org&#39;, &#39;www.mediawiki.org&#39; or &#39;commons.wikimedia.org&#39;.
+            access (str, optional):     If you want to filter by access method, use one
+                                        of &#39;desktop&#39;, &#39;mobile-app&#39; or &#39;mobile-web&#39;. If you are
+                                        interested in pageviews regardless of access method,
+                                        use &#39;all-access&#39;.
+            agent (str, optional):      If you want to filter by agent type, use one of &#39;user&#39;,
+                                        &#39;automated&#39; or &#39;spider&#39;. If you are interested in pageviews
+                                        regardless of agent type, use &#39;all-agents&#39;.
+
+        Returns:
+            WikiApiClient:    A new instance of the WikiApiClient class.
+        &#34;&#34;&#34;
+
+
+        self._session = requests.session()
+        self._headers = {&#34;User-Agent&#34;: user_agent}
+        self._project = project
+        self._access = access
+        self._agent = agent
+        self._url = f&#34;https://{hostname}/api/{version}/metrics&#34;
+        self._error_class = error_class
+
+    def _return_response(self, response):
+        &#34;&#34;&#34;
+        If response is OK, returns the JSON. if it&#39;s not, raises an error
+        based on the error_class
+
+        Args:
+            response (requests.Response): The response from an HTTP request:
+
+        Returns:
+            str: JSON string
+        &#34;&#34;&#34;
+
+        try:
+            if not response.ok:
+                try:
+                    data = response.json()
+                except ValueError:
+                    data = response.data
+                raise self._error_class(status_code=response.status_code, **data)
+            if response and response.text:
+                return response.text
+        except:
+            print(f&#39;ERROR while fetching {data[&#34;uri&#34;]}&#39;)
+            raise
+
+
+    def _get_api_url(self, endpoint, article=None, granularity=None, start=None, end=None):
+        &#34;&#34;&#34;
+        Constructs full API url
+
+        Args:
+            endpoint (str):              The endpoint being accessed. Currently &#34;/pageviews/per-article&#34; or
+                                         &#34;/pageviews/top&#34; have supporting methods
+            article (str, optional):     The article to fetch pageviews for, if applicable.
+                                         Must already be URI-encoded and have spaces replaced with
+                                         underscores
+            granularity (str, optional): For `per-article` endpoints, the granularity of the data to be
+                                         returned: &#34;daily&#34; or &#34;monthly&#34;
+            start (date, optional):  Date object representing beginning of reporting window
+            end (date, optional):    Date object representing end of reporting window
+
+        Returns:
+            str: Full URL ready to be fetched/hit
+        &#34;&#34;&#34;
+
+        full_url = f&#34;{self._url}{endpoint}/{self._project}/{self._access}&#34;
+        if article:
+            start = start.strftime(&#39;%Y%m%d&#39;)
+            end = end.strftime(&#39;%Y%m%d&#39;)
+            full_url += f&#34;/{self._agent}/{article}/{granularity}/{start}/{end}&#34;
+        return full_url
+
+    def _get(self, full_url):
+        &#34;&#34;&#34;
+        Wrapper around requests `.get()` method, using the WikiAPIClient instance&#39;s session and headers
+
+        Args:
+            full_url(str): Full URL to GET
+
+        Returns:
+            str: JSON string
+        &#34;&#34;&#34;
+
+        response = self._session.get(full_url, headers=self._headers)
+        return self._return_response(response)
+
+    def _encode_article(self, article):
+        &#34;&#34;&#34;
+        Converts user supplied article name to format needed by API
+
+        Args:
+            article (str): User supplied &#34;article&#34;
+
+        Returns:
+            str: Encoded &#34;article&#34; string
+
+        &#34;&#34;&#34;
+
+        #  article = article.capitalize()
+        article = article.replace(&#39; &#39;, &#39;_&#39;)
+        article_safe = quote(article, safe=&#39;&#39;)
+        return article_safe
+
+    def get_most_viewed_for_week(self, start_date, limit=999):
+        &#34;&#34;&#34;
+        Get a list of the most viewed Wikipedia articles for a rolling week (any 7 day period) starting
+        with `start_date`.
+
+        Args:
+            start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                             `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                             `DD` is the two-digit day of the month.
+            limit (int, optional): Number of articles to return. Defaults to 999 to return 1000 articles.
+
+        Returns:
+            list: A sorted list of article dicts: [
+                {
+                    article: &lt;str&gt;,
+                    views: &lt;int&gt;,
+                    rank: &lt;int&gt;,
+                }
+                ...
+            ]
+        &#34;&#34;&#34;
+
+        # error anything before 20150701
+        week_start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+        week_end = week_start + timedelta(days=6)
+        counter = Counter()
+
+        while week_start &lt;= week_end:
+            articles = self.get_most_viewed_for_day(week_start.year,
+                                                    week_start.month,
+                                                    week_start.day)
+
+            for article in articles:
+                counter.update({article[&#34;article&#34;]: article[&#34;views&#34;]})
+            week_start += timedelta(days=1)
+
+        result = [{&#39;article&#39;: article, &#39;views&#39;: views, &#39;rank&#39;: rank}
+                  for rank, (article, views) in enumerate(counter.items(), start=1)][:limit]
+
+        return result
+
+    def get_most_viewed_for_month(self, year, month, limit=999):
+        &#34;&#34;&#34;
+        Get a list of the most viewed Wikipedia articles for a given month.
+
+        Args:
+            year (int):  Year to be fetched
+            month (int): An integer representing the month to fetch, where 1
+                         represents January, 2 represents February, and so on.
+            limit (int, optional): Number of articles to return. Defaults to 999 to return 1000 articles.
+
+        Returns:
+            list: A sorted list of article dicts: [
+                {
+                    article: &lt;str&gt;,
+                    views: &lt;int&gt;,
+                    rank: &lt;int&gt;,
+                }
+                ...
+            ]
+        &#34;&#34;&#34;
+
+        month = date(year, month, 1)
+        url = (self._get_api_url(&#34;/pageviews/top&#34;) +
+                               f&#34;/{month.year}/{month.month}/all-days&#34;)
+
+        return json.loads(self._get(url))[&#34;items&#34;][0][&#34;articles&#34;][:limit]
+
+    def get_most_viewed_for_day(self, year, month, day):
+        &#34;&#34;&#34;
+        Get a list of the most viewed Wikipedia articles for a given day.
+
+        Args:
+            year (int):  Year to be fetched
+            month (int): An integer representing the month to fetch, where 1
+                         represents January, 2 represents February, and so on.
+            day (int): Day to be fetched
+
+        Returns:
+            list: A sorted list of article dicts: [
+                {
+                    article: &lt;str&gt;,
+                    views: &lt;int&gt;,
+                    rank: &lt;int&gt;,
+                }
+                ...
+            ]
+        &#34;&#34;&#34;
+
+        month = str(month).zfill(2)
+        day = str(day).zfill(2)
+
+        url = (self._get_api_url(&#34;/pageviews/top&#34;) +
+                                f&#34;/{year}/{month}/{day}&#34;)
+
+        articles = json.loads(self._get(url))[&#34;items&#34;][0][&#34;articles&#34;]
+
+        return articles
+
+    def get_article_views_for_week(self, article, start_date):
+        &#34;&#34;&#34;
+        Get a given article&#39;s total views for a rolling week (7 day period starting with `start_date`)
+
+        Args:
+            article (str):    Article to fetch pageviews for
+            start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                             `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                             `DD` is the two-digit day of the month.
+        Returns:
+            int: total article pageviews for given 1 week period
+
+        &#34;&#34;&#34;
+
+        article = self._encode_article(article)
+        week_start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+        week_end = week_start + timedelta(days=6)
+
+        url = self._get_api_url(&#34;/pageviews/per-article&#34;, article=article,
+                                granularity=&#34;daily&#34;, start=week_start, end=week_end)
+        daily_views = json.loads(self._get(url))[&#34;items&#34;]
+
+        return sum(day[&#34;views&#34;] for day in daily_views)
+
+    def get_article_views_for_month(self, article, start_date, end_date):
+        &#34;&#34;&#34;
+        Get an article&#39;s total views for a given month
+
+        Args:
+            article (str): Article to fetch pageviews for
+            start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                              `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                              `DD` is the two-digit day of the month. Must be first day of the
+                              particular month.
+            end_date (str): A string representing a date in the format `YYYYMMDD`, where
+                              `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                              `DD` is the two-digit day of the month. Must be last day of the
+                              particular month, including leap days.
+        Returns:
+            int: total article pageviews for given month
+
+        &#34;&#34;&#34;
+
+        article = self._encode_article(article)
+        start_date = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+        end_date = datetime.strptime(end_date, &#39;%Y%m%d&#39;)
+
+        url = self._get_api_url(&#34;/pageviews/per-article&#34;, article=article,
+                                granularity=&#34;monthly&#34;, start=start_date, end=end_date)
+        monthly_views = json.loads(self._get(url))[&#34;items&#34;]
+        return monthly_views[0][&#34;views&#34;]
+
+    def _get_pageviews(self, article, start_date, end_date):
+        &#34;&#34;&#34;
+        Given a particular date range, get the day a given article had the most pageviews
+
+        Args:
+            article (str):              Article to fetch pageviews for
+            start_date (date):      Date object representing beginning of reporting window
+            end_date (date):        Date object representing end of reporting window, inclusive
+
+        Returns:
+            Tuple[datetime, int]:       A tuple containing a datetime object
+                                        representing the date with the most pageviews in
+                                        the given period, and an integer representing the
+                                        number of pageviews
+
+        &#34;&#34;&#34;
+
+        url = self._get_api_url(&#34;/pageviews/per-article&#34;, article=article,
+                                granularity=&#34;daily&#34;, start=start_date, end=end_date)
+
+        daily_views = json.loads(self._get(url))[&#34;items&#34;]
+        most_views = sorted(daily_views, key=lambda x: x[&#34;views&#34;], reverse=True)[0]
+        return (datetime.strptime(most_views[&#34;timestamp&#34;], &#39;%Y%j%H%M&#39;), most_views[&#34;views&#34;])
+
+    def get_most_article_views_in_month(self, article, year, month):
+        &#34;&#34;&#34;
+        Get the day a particular article had the most pageviews in a given month
+
+        Args:
+            article (str):  Article to fetch pageviews for
+            year (int):     An integer representing the year to fetch
+            month (int):    An integer representing the month to fetch, where 1
+                            represents January, 2 represents February, and so on.
+
+        Returns:
+             Tuple[datetime, int]:  A tuple containing a datetime object
+                                    representing the date with the most pageviews in
+                                    the given month, and an integer representing the
+                                    number of pageviews
+
+        &#34;&#34;&#34;
+        article = self._encode_article(article)
+
+        start = date(year, month, 1)
+        _ , end = monthrange(year, month)
+        end = date(year, month, end)
+
+        return self._get_pageviews(article, start, end)
+
+    def get_most_article_views_in_week(self, article, start_date):
+        &#34;&#34;&#34;
+        Get the day a particular article had the most pageviews in the rolling week
+        (any 7 day period) starting with `start_date`
+
+        Args:
+            article (str):      Article to fetch pageviews for
+            start_date (str):   A string representing a date in the format `YYYYMMDD`, where
+                                `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                                `DD` is the two-digit day of the month.
+        Returns:
+            Tuple[datetime, int]:   A tuple containing a `datetime` object
+                                    representing the date with the most pageviews in
+                                    the given period, and an integer representing the
+                                    number of pageviews
+
+        &#34;&#34;&#34;
+
+        article = self._encode_article(article)
+
+        start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+        end = start + timedelta(days=6)
+
+        return self._get_pageviews(article, start, end)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="wiki_api.client.WikiApiClient"><code class="flex name class">
+<span>class <span class="ident">WikiApiClient</span></span>
+<span>(</span><span>user_agent=&#x27;Sarah Duve &lt;saduve@gmail.com&gt;&#x27;, hostname='wikimedia.org', version='rest_v1', project='en.wikipedia.org', access='all-access', agent='user', error_class=wiki_api.errors.WikiApiError)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a WikiApiClient</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>user_agent</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>User-Agent string to use for HTTP requests. Should be
+something that allows you to be contacted if
+need be, see <a href="https://www.mediawiki.org/wiki/REST_API">https://www.mediawiki.org/wiki/REST_API</a></dd>
+<dt><strong><code>hostname</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Hostname of API being accessed</dd>
+<dt><strong><code>version</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Version of API being accessed</dd>
+<dt><strong><code>project</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The domain of any Wikimedia project, for example
+'en.wikipedia.org', 'www.mediawiki.org' or 'commons.wikimedia.org'.</dd>
+<dt><strong><code>access</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>
+<p>If you want to filter by access method, use one
+of 'desktop', 'mobile-app' or 'mobile-web'. If you are
+interested in pageviews regardless of access method,
+use 'all-access'.</p>
+</dd>
+<dt><strong><code>agent</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>
+<p>If you want to filter by agent type, use one of 'user',
+'automated' or 'spider'. If you are interested in pageviews
+regardless of agent type, use 'all-agents'.</p>
+</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="wiki_api.client.WikiApiClient" href="#wiki_api.client.WikiApiClient">WikiApiClient</a></code></dt>
+<dd>A new instance of the WikiApiClient class.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class WikiApiClient:
+
+    def __init__(self, user_agent=&#34;Sarah Duve &lt;saduve@gmail.com&gt;&#34;,
+                 hostname=&#34;wikimedia.org&#34;, version=&#34;rest_v1&#34;,
+                 project=&#34;en.wikipedia.org&#34;, access=&#34;all-access&#34;,
+                 agent=&#34;user&#34;, error_class=WikiApiError):
+
+        &#34;&#34;&#34;
+        Create a WikiApiClient
+
+        Args:
+            user_agent (str, optional): User-Agent string to use for HTTP requests. Should be
+                                        something that allows you to be contacted if
+                                        need be, see https://www.mediawiki.org/wiki/REST_API
+            hostname (str, optional):   Hostname of API being accessed
+            version (str, optional):    Version of API being accessed
+            project (str, optional):    The domain of any Wikimedia project, for example
+                                        &#39;en.wikipedia.org&#39;, &#39;www.mediawiki.org&#39; or &#39;commons.wikimedia.org&#39;.
+            access (str, optional):     If you want to filter by access method, use one
+                                        of &#39;desktop&#39;, &#39;mobile-app&#39; or &#39;mobile-web&#39;. If you are
+                                        interested in pageviews regardless of access method,
+                                        use &#39;all-access&#39;.
+            agent (str, optional):      If you want to filter by agent type, use one of &#39;user&#39;,
+                                        &#39;automated&#39; or &#39;spider&#39;. If you are interested in pageviews
+                                        regardless of agent type, use &#39;all-agents&#39;.
+
+        Returns:
+            WikiApiClient:    A new instance of the WikiApiClient class.
+        &#34;&#34;&#34;
+
+
+        self._session = requests.session()
+        self._headers = {&#34;User-Agent&#34;: user_agent}
+        self._project = project
+        self._access = access
+        self._agent = agent
+        self._url = f&#34;https://{hostname}/api/{version}/metrics&#34;
+        self._error_class = error_class
+
+    def _return_response(self, response):
+        &#34;&#34;&#34;
+        If response is OK, returns the JSON. if it&#39;s not, raises an error
+        based on the error_class
+
+        Args:
+            response (requests.Response): The response from an HTTP request:
+
+        Returns:
+            str: JSON string
+        &#34;&#34;&#34;
+
+        try:
+            if not response.ok:
+                try:
+                    data = response.json()
+                except ValueError:
+                    data = response.data
+                raise self._error_class(status_code=response.status_code, **data)
+            if response and response.text:
+                return response.text
+        except:
+            print(f&#39;ERROR while fetching {data[&#34;uri&#34;]}&#39;)
+            raise
+
+
+    def _get_api_url(self, endpoint, article=None, granularity=None, start=None, end=None):
+        &#34;&#34;&#34;
+        Constructs full API url
+
+        Args:
+            endpoint (str):              The endpoint being accessed. Currently &#34;/pageviews/per-article&#34; or
+                                         &#34;/pageviews/top&#34; have supporting methods
+            article (str, optional):     The article to fetch pageviews for, if applicable.
+                                         Must already be URI-encoded and have spaces replaced with
+                                         underscores
+            granularity (str, optional): For `per-article` endpoints, the granularity of the data to be
+                                         returned: &#34;daily&#34; or &#34;monthly&#34;
+            start (date, optional):  Date object representing beginning of reporting window
+            end (date, optional):    Date object representing end of reporting window
+
+        Returns:
+            str: Full URL ready to be fetched/hit
+        &#34;&#34;&#34;
+
+        full_url = f&#34;{self._url}{endpoint}/{self._project}/{self._access}&#34;
+        if article:
+            start = start.strftime(&#39;%Y%m%d&#39;)
+            end = end.strftime(&#39;%Y%m%d&#39;)
+            full_url += f&#34;/{self._agent}/{article}/{granularity}/{start}/{end}&#34;
+        return full_url
+
+    def _get(self, full_url):
+        &#34;&#34;&#34;
+        Wrapper around requests `.get()` method, using the WikiAPIClient instance&#39;s session and headers
+
+        Args:
+            full_url(str): Full URL to GET
+
+        Returns:
+            str: JSON string
+        &#34;&#34;&#34;
+
+        response = self._session.get(full_url, headers=self._headers)
+        return self._return_response(response)
+
+    def _encode_article(self, article):
+        &#34;&#34;&#34;
+        Converts user supplied article name to format needed by API
+
+        Args:
+            article (str): User supplied &#34;article&#34;
+
+        Returns:
+            str: Encoded &#34;article&#34; string
+
+        &#34;&#34;&#34;
+
+        #  article = article.capitalize()
+        article = article.replace(&#39; &#39;, &#39;_&#39;)
+        article_safe = quote(article, safe=&#39;&#39;)
+        return article_safe
+
+    def get_most_viewed_for_week(self, start_date, limit=999):
+        &#34;&#34;&#34;
+        Get a list of the most viewed Wikipedia articles for a rolling week (any 7 day period) starting
+        with `start_date`.
+
+        Args:
+            start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                             `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                             `DD` is the two-digit day of the month.
+            limit (int, optional): Number of articles to return. Defaults to 999 to return 1000 articles.
+
+        Returns:
+            list: A sorted list of article dicts: [
+                {
+                    article: &lt;str&gt;,
+                    views: &lt;int&gt;,
+                    rank: &lt;int&gt;,
+                }
+                ...
+            ]
+        &#34;&#34;&#34;
+
+        # error anything before 20150701
+        week_start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+        week_end = week_start + timedelta(days=6)
+        counter = Counter()
+
+        while week_start &lt;= week_end:
+            articles = self.get_most_viewed_for_day(week_start.year,
+                                                    week_start.month,
+                                                    week_start.day)
+
+            for article in articles:
+                counter.update({article[&#34;article&#34;]: article[&#34;views&#34;]})
+            week_start += timedelta(days=1)
+
+        result = [{&#39;article&#39;: article, &#39;views&#39;: views, &#39;rank&#39;: rank}
+                  for rank, (article, views) in enumerate(counter.items(), start=1)][:limit]
+
+        return result
+
+    def get_most_viewed_for_month(self, year, month, limit=999):
+        &#34;&#34;&#34;
+        Get a list of the most viewed Wikipedia articles for a given month.
+
+        Args:
+            year (int):  Year to be fetched
+            month (int): An integer representing the month to fetch, where 1
+                         represents January, 2 represents February, and so on.
+            limit (int, optional): Number of articles to return. Defaults to 999 to return 1000 articles.
+
+        Returns:
+            list: A sorted list of article dicts: [
+                {
+                    article: &lt;str&gt;,
+                    views: &lt;int&gt;,
+                    rank: &lt;int&gt;,
+                }
+                ...
+            ]
+        &#34;&#34;&#34;
+
+        month = date(year, month, 1)
+        url = (self._get_api_url(&#34;/pageviews/top&#34;) +
+                               f&#34;/{month.year}/{month.month}/all-days&#34;)
+
+        return json.loads(self._get(url))[&#34;items&#34;][0][&#34;articles&#34;][:limit]
+
+    def get_most_viewed_for_day(self, year, month, day):
+        &#34;&#34;&#34;
+        Get a list of the most viewed Wikipedia articles for a given day.
+
+        Args:
+            year (int):  Year to be fetched
+            month (int): An integer representing the month to fetch, where 1
+                         represents January, 2 represents February, and so on.
+            day (int): Day to be fetched
+
+        Returns:
+            list: A sorted list of article dicts: [
+                {
+                    article: &lt;str&gt;,
+                    views: &lt;int&gt;,
+                    rank: &lt;int&gt;,
+                }
+                ...
+            ]
+        &#34;&#34;&#34;
+
+        month = str(month).zfill(2)
+        day = str(day).zfill(2)
+
+        url = (self._get_api_url(&#34;/pageviews/top&#34;) +
+                                f&#34;/{year}/{month}/{day}&#34;)
+
+        articles = json.loads(self._get(url))[&#34;items&#34;][0][&#34;articles&#34;]
+
+        return articles
+
+    def get_article_views_for_week(self, article, start_date):
+        &#34;&#34;&#34;
+        Get a given article&#39;s total views for a rolling week (7 day period starting with `start_date`)
+
+        Args:
+            article (str):    Article to fetch pageviews for
+            start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                             `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                             `DD` is the two-digit day of the month.
+        Returns:
+            int: total article pageviews for given 1 week period
+
+        &#34;&#34;&#34;
+
+        article = self._encode_article(article)
+        week_start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+        week_end = week_start + timedelta(days=6)
+
+        url = self._get_api_url(&#34;/pageviews/per-article&#34;, article=article,
+                                granularity=&#34;daily&#34;, start=week_start, end=week_end)
+        daily_views = json.loads(self._get(url))[&#34;items&#34;]
+
+        return sum(day[&#34;views&#34;] for day in daily_views)
+
+    def get_article_views_for_month(self, article, start_date, end_date):
+        &#34;&#34;&#34;
+        Get an article&#39;s total views for a given month
+
+        Args:
+            article (str): Article to fetch pageviews for
+            start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                              `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                              `DD` is the two-digit day of the month. Must be first day of the
+                              particular month.
+            end_date (str): A string representing a date in the format `YYYYMMDD`, where
+                              `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                              `DD` is the two-digit day of the month. Must be last day of the
+                              particular month, including leap days.
+        Returns:
+            int: total article pageviews for given month
+
+        &#34;&#34;&#34;
+
+        article = self._encode_article(article)
+        start_date = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+        end_date = datetime.strptime(end_date, &#39;%Y%m%d&#39;)
+
+        url = self._get_api_url(&#34;/pageviews/per-article&#34;, article=article,
+                                granularity=&#34;monthly&#34;, start=start_date, end=end_date)
+        monthly_views = json.loads(self._get(url))[&#34;items&#34;]
+        return monthly_views[0][&#34;views&#34;]
+
+    def _get_pageviews(self, article, start_date, end_date):
+        &#34;&#34;&#34;
+        Given a particular date range, get the day a given article had the most pageviews
+
+        Args:
+            article (str):              Article to fetch pageviews for
+            start_date (date):      Date object representing beginning of reporting window
+            end_date (date):        Date object representing end of reporting window, inclusive
+
+        Returns:
+            Tuple[datetime, int]:       A tuple containing a datetime object
+                                        representing the date with the most pageviews in
+                                        the given period, and an integer representing the
+                                        number of pageviews
+
+        &#34;&#34;&#34;
+
+        url = self._get_api_url(&#34;/pageviews/per-article&#34;, article=article,
+                                granularity=&#34;daily&#34;, start=start_date, end=end_date)
+
+        daily_views = json.loads(self._get(url))[&#34;items&#34;]
+        most_views = sorted(daily_views, key=lambda x: x[&#34;views&#34;], reverse=True)[0]
+        return (datetime.strptime(most_views[&#34;timestamp&#34;], &#39;%Y%j%H%M&#39;), most_views[&#34;views&#34;])
+
+    def get_most_article_views_in_month(self, article, year, month):
+        &#34;&#34;&#34;
+        Get the day a particular article had the most pageviews in a given month
+
+        Args:
+            article (str):  Article to fetch pageviews for
+            year (int):     An integer representing the year to fetch
+            month (int):    An integer representing the month to fetch, where 1
+                            represents January, 2 represents February, and so on.
+
+        Returns:
+             Tuple[datetime, int]:  A tuple containing a datetime object
+                                    representing the date with the most pageviews in
+                                    the given month, and an integer representing the
+                                    number of pageviews
+
+        &#34;&#34;&#34;
+        article = self._encode_article(article)
+
+        start = date(year, month, 1)
+        _ , end = monthrange(year, month)
+        end = date(year, month, end)
+
+        return self._get_pageviews(article, start, end)
+
+    def get_most_article_views_in_week(self, article, start_date):
+        &#34;&#34;&#34;
+        Get the day a particular article had the most pageviews in the rolling week
+        (any 7 day period) starting with `start_date`
+
+        Args:
+            article (str):      Article to fetch pageviews for
+            start_date (str):   A string representing a date in the format `YYYYMMDD`, where
+                                `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                                `DD` is the two-digit day of the month.
+        Returns:
+            Tuple[datetime, int]:   A tuple containing a `datetime` object
+                                    representing the date with the most pageviews in
+                                    the given period, and an integer representing the
+                                    number of pageviews
+
+        &#34;&#34;&#34;
+
+        article = self._encode_article(article)
+
+        start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+        end = start + timedelta(days=6)
+
+        return self._get_pageviews(article, start, end)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="wiki_api.client.WikiApiClient.get_article_views_for_month"><code class="name flex">
+<span>def <span class="ident">get_article_views_for_month</span></span>(<span>self, article, start_date, end_date)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get an article's total views for a given month</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>article</code></strong> :&ensp;<code>str</code></dt>
+<dd>Article to fetch pageviews for</dd>
+<dt><strong><code>start_date</code></strong> :&ensp;<code>str</code></dt>
+<dd>A string representing a date in the format <code>YYYYMMDD</code>, where
+<code>YYYY</code> is the four-digit year, <code>MM</code> is the two-digit month, and
+<code>DD</code> is the two-digit day of the month. Must be first day of the
+particular month.</dd>
+<dt><strong><code>end_date</code></strong> :&ensp;<code>str</code></dt>
+<dd>A string representing a date in the format <code>YYYYMMDD</code>, where
+<code>YYYY</code> is the four-digit year, <code>MM</code> is the two-digit month, and
+<code>DD</code> is the two-digit day of the month. Must be last day of the
+particular month, including leap days.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>total article pageviews for given month</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_article_views_for_month(self, article, start_date, end_date):
+    &#34;&#34;&#34;
+    Get an article&#39;s total views for a given month
+
+    Args:
+        article (str): Article to fetch pageviews for
+        start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                          `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                          `DD` is the two-digit day of the month. Must be first day of the
+                          particular month.
+        end_date (str): A string representing a date in the format `YYYYMMDD`, where
+                          `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                          `DD` is the two-digit day of the month. Must be last day of the
+                          particular month, including leap days.
+    Returns:
+        int: total article pageviews for given month
+
+    &#34;&#34;&#34;
+
+    article = self._encode_article(article)
+    start_date = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+    end_date = datetime.strptime(end_date, &#39;%Y%m%d&#39;)
+
+    url = self._get_api_url(&#34;/pageviews/per-article&#34;, article=article,
+                            granularity=&#34;monthly&#34;, start=start_date, end=end_date)
+    monthly_views = json.loads(self._get(url))[&#34;items&#34;]
+    return monthly_views[0][&#34;views&#34;]</code></pre>
+</details>
+</dd>
+<dt id="wiki_api.client.WikiApiClient.get_article_views_for_week"><code class="name flex">
+<span>def <span class="ident">get_article_views_for_week</span></span>(<span>self, article, start_date)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get a given article's total views for a rolling week (7 day period starting with <code>start_date</code>)</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>article</code></strong> :&ensp;<code>str</code></dt>
+<dd>Article to fetch pageviews for</dd>
+<dt><strong><code>start_date</code></strong> :&ensp;<code>str</code></dt>
+<dd>A string representing a date in the format <code>YYYYMMDD</code>, where
+<code>YYYY</code> is the four-digit year, <code>MM</code> is the two-digit month, and
+<code>DD</code> is the two-digit day of the month.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>total article pageviews for given 1 week period</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_article_views_for_week(self, article, start_date):
+    &#34;&#34;&#34;
+    Get a given article&#39;s total views for a rolling week (7 day period starting with `start_date`)
+
+    Args:
+        article (str):    Article to fetch pageviews for
+        start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                         `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                         `DD` is the two-digit day of the month.
+    Returns:
+        int: total article pageviews for given 1 week period
+
+    &#34;&#34;&#34;
+
+    article = self._encode_article(article)
+    week_start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+    week_end = week_start + timedelta(days=6)
+
+    url = self._get_api_url(&#34;/pageviews/per-article&#34;, article=article,
+                            granularity=&#34;daily&#34;, start=week_start, end=week_end)
+    daily_views = json.loads(self._get(url))[&#34;items&#34;]
+
+    return sum(day[&#34;views&#34;] for day in daily_views)</code></pre>
+</details>
+</dd>
+<dt id="wiki_api.client.WikiApiClient.get_most_article_views_in_month"><code class="name flex">
+<span>def <span class="ident">get_most_article_views_in_month</span></span>(<span>self, article, year, month)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the day a particular article had the most pageviews in a given month</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>article</code></strong> :&ensp;<code>str</code></dt>
+<dd>Article to fetch pageviews for</dd>
+<dt><strong><code>year</code></strong> :&ensp;<code>int</code></dt>
+<dd>
+<p>An integer representing the year to fetch</p>
+</dd>
+<dt><strong><code>month</code></strong> :&ensp;<code>int</code></dt>
+<dd>An integer representing the month to fetch, where 1
+represents January, 2 represents February, and so on.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Tuple[datetime, int]</code></dt>
+<dd>A tuple containing a datetime object
+representing the date with the most pageviews in
+the given month, and an integer representing the
+number of pageviews</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_most_article_views_in_month(self, article, year, month):
+    &#34;&#34;&#34;
+    Get the day a particular article had the most pageviews in a given month
+
+    Args:
+        article (str):  Article to fetch pageviews for
+        year (int):     An integer representing the year to fetch
+        month (int):    An integer representing the month to fetch, where 1
+                        represents January, 2 represents February, and so on.
+
+    Returns:
+         Tuple[datetime, int]:  A tuple containing a datetime object
+                                representing the date with the most pageviews in
+                                the given month, and an integer representing the
+                                number of pageviews
+
+    &#34;&#34;&#34;
+    article = self._encode_article(article)
+
+    start = date(year, month, 1)
+    _ , end = monthrange(year, month)
+    end = date(year, month, end)
+
+    return self._get_pageviews(article, start, end)</code></pre>
+</details>
+</dd>
+<dt id="wiki_api.client.WikiApiClient.get_most_article_views_in_week"><code class="name flex">
+<span>def <span class="ident">get_most_article_views_in_week</span></span>(<span>self, article, start_date)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the day a particular article had the most pageviews in the rolling week
+(any 7 day period) starting with <code>start_date</code></p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>article</code></strong> :&ensp;<code>str</code></dt>
+<dd>
+<p>Article to fetch pageviews for</p>
+</dd>
+<dt><strong><code>start_date</code></strong> :&ensp;<code>str</code></dt>
+<dd>A string representing a date in the format <code>YYYYMMDD</code>, where
+<code>YYYY</code> is the four-digit year, <code>MM</code> is the two-digit month, and
+<code>DD</code> is the two-digit day of the month.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Tuple[datetime, int]</code></dt>
+<dd>A tuple containing a <code>datetime</code> object
+representing the date with the most pageviews in
+the given period, and an integer representing the
+number of pageviews</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_most_article_views_in_week(self, article, start_date):
+    &#34;&#34;&#34;
+    Get the day a particular article had the most pageviews in the rolling week
+    (any 7 day period) starting with `start_date`
+
+    Args:
+        article (str):      Article to fetch pageviews for
+        start_date (str):   A string representing a date in the format `YYYYMMDD`, where
+                            `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                            `DD` is the two-digit day of the month.
+    Returns:
+        Tuple[datetime, int]:   A tuple containing a `datetime` object
+                                representing the date with the most pageviews in
+                                the given period, and an integer representing the
+                                number of pageviews
+
+    &#34;&#34;&#34;
+
+    article = self._encode_article(article)
+
+    start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+    end = start + timedelta(days=6)
+
+    return self._get_pageviews(article, start, end)</code></pre>
+</details>
+</dd>
+<dt id="wiki_api.client.WikiApiClient.get_most_viewed_for_day"><code class="name flex">
+<span>def <span class="ident">get_most_viewed_for_day</span></span>(<span>self, year, month, day)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get a list of the most viewed Wikipedia articles for a given day.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>year</code></strong> :&ensp;<code>int</code></dt>
+<dd>Year to be fetched</dd>
+<dt><strong><code>month</code></strong> :&ensp;<code>int</code></dt>
+<dd>An integer representing the month to fetch, where 1
+represents January, 2 represents February, and so on.</dd>
+<dt><strong><code>day</code></strong> :&ensp;<code>int</code></dt>
+<dd>Day to be fetched</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>A sorted list of article dicts: [
+{
+article: <str>,
+views: <int>,
+rank: <int>,
+}
+&hellip;</dd>
+</dl>
+<p>]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_most_viewed_for_day(self, year, month, day):
+    &#34;&#34;&#34;
+    Get a list of the most viewed Wikipedia articles for a given day.
+
+    Args:
+        year (int):  Year to be fetched
+        month (int): An integer representing the month to fetch, where 1
+                     represents January, 2 represents February, and so on.
+        day (int): Day to be fetched
+
+    Returns:
+        list: A sorted list of article dicts: [
+            {
+                article: &lt;str&gt;,
+                views: &lt;int&gt;,
+                rank: &lt;int&gt;,
+            }
+            ...
+        ]
+    &#34;&#34;&#34;
+
+    month = str(month).zfill(2)
+    day = str(day).zfill(2)
+
+    url = (self._get_api_url(&#34;/pageviews/top&#34;) +
+                            f&#34;/{year}/{month}/{day}&#34;)
+
+    articles = json.loads(self._get(url))[&#34;items&#34;][0][&#34;articles&#34;]
+
+    return articles</code></pre>
+</details>
+</dd>
+<dt id="wiki_api.client.WikiApiClient.get_most_viewed_for_month"><code class="name flex">
+<span>def <span class="ident">get_most_viewed_for_month</span></span>(<span>self, year, month, limit=999)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get a list of the most viewed Wikipedia articles for a given month.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>year</code></strong> :&ensp;<code>int</code></dt>
+<dd>Year to be fetched</dd>
+<dt><strong><code>month</code></strong> :&ensp;<code>int</code></dt>
+<dd>An integer representing the month to fetch, where 1
+represents January, 2 represents February, and so on.</dd>
+<dt><strong><code>limit</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Number of articles to return. Defaults to 999 to return 1000 articles.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>A sorted list of article dicts: [
+{
+article: <str>,
+views: <int>,
+rank: <int>,
+}
+&hellip;</dd>
+</dl>
+<p>]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_most_viewed_for_month(self, year, month, limit=999):
+    &#34;&#34;&#34;
+    Get a list of the most viewed Wikipedia articles for a given month.
+
+    Args:
+        year (int):  Year to be fetched
+        month (int): An integer representing the month to fetch, where 1
+                     represents January, 2 represents February, and so on.
+        limit (int, optional): Number of articles to return. Defaults to 999 to return 1000 articles.
+
+    Returns:
+        list: A sorted list of article dicts: [
+            {
+                article: &lt;str&gt;,
+                views: &lt;int&gt;,
+                rank: &lt;int&gt;,
+            }
+            ...
+        ]
+    &#34;&#34;&#34;
+
+    month = date(year, month, 1)
+    url = (self._get_api_url(&#34;/pageviews/top&#34;) +
+                           f&#34;/{month.year}/{month.month}/all-days&#34;)
+
+    return json.loads(self._get(url))[&#34;items&#34;][0][&#34;articles&#34;][:limit]</code></pre>
+</details>
+</dd>
+<dt id="wiki_api.client.WikiApiClient.get_most_viewed_for_week"><code class="name flex">
+<span>def <span class="ident">get_most_viewed_for_week</span></span>(<span>self, start_date, limit=999)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get a list of the most viewed Wikipedia articles for a rolling week (any 7 day period) starting
+with <code>start_date</code>.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>start_date</code></strong> :&ensp;<code>str</code></dt>
+<dd>A string representing a date in the format <code>YYYYMMDD</code>, where
+<code>YYYY</code> is the four-digit year, <code>MM</code> is the two-digit month, and
+<code>DD</code> is the two-digit day of the month.</dd>
+<dt><strong><code>limit</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Number of articles to return. Defaults to 999 to return 1000 articles.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>A sorted list of article dicts: [
+{
+article: <str>,
+views: <int>,
+rank: <int>,
+}
+&hellip;</dd>
+</dl>
+<p>]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_most_viewed_for_week(self, start_date, limit=999):
+    &#34;&#34;&#34;
+    Get a list of the most viewed Wikipedia articles for a rolling week (any 7 day period) starting
+    with `start_date`.
+
+    Args:
+        start_date (str): A string representing a date in the format `YYYYMMDD`, where
+                         `YYYY` is the four-digit year, `MM` is the two-digit month, and
+                         `DD` is the two-digit day of the month.
+        limit (int, optional): Number of articles to return. Defaults to 999 to return 1000 articles.
+
+    Returns:
+        list: A sorted list of article dicts: [
+            {
+                article: &lt;str&gt;,
+                views: &lt;int&gt;,
+                rank: &lt;int&gt;,
+            }
+            ...
+        ]
+    &#34;&#34;&#34;
+
+    # error anything before 20150701
+    week_start = datetime.strptime(start_date, &#39;%Y%m%d&#39;)
+    week_end = week_start + timedelta(days=6)
+    counter = Counter()
+
+    while week_start &lt;= week_end:
+        articles = self.get_most_viewed_for_day(week_start.year,
+                                                week_start.month,
+                                                week_start.day)
+
+        for article in articles:
+            counter.update({article[&#34;article&#34;]: article[&#34;views&#34;]})
+        week_start += timedelta(days=1)
+
+    result = [{&#39;article&#39;: article, &#39;views&#39;: views, &#39;rank&#39;: rank}
+              for rank, (article, views) in enumerate(counter.items(), start=1)][:limit]
+
+    return result</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="wiki_api" href="index.html">wiki_api</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="wiki_api.client.WikiApiClient" href="#wiki_api.client.WikiApiClient">WikiApiClient</a></code></h4>
+<ul class="">
+<li><code><a title="wiki_api.client.WikiApiClient.get_article_views_for_month" href="#wiki_api.client.WikiApiClient.get_article_views_for_month">get_article_views_for_month</a></code></li>
+<li><code><a title="wiki_api.client.WikiApiClient.get_article_views_for_week" href="#wiki_api.client.WikiApiClient.get_article_views_for_week">get_article_views_for_week</a></code></li>
+<li><code><a title="wiki_api.client.WikiApiClient.get_most_article_views_in_month" href="#wiki_api.client.WikiApiClient.get_most_article_views_in_month">get_most_article_views_in_month</a></code></li>
+<li><code><a title="wiki_api.client.WikiApiClient.get_most_article_views_in_week" href="#wiki_api.client.WikiApiClient.get_most_article_views_in_week">get_most_article_views_in_week</a></code></li>
+<li><code><a title="wiki_api.client.WikiApiClient.get_most_viewed_for_day" href="#wiki_api.client.WikiApiClient.get_most_viewed_for_day">get_most_viewed_for_day</a></code></li>
+<li><code><a title="wiki_api.client.WikiApiClient.get_most_viewed_for_month" href="#wiki_api.client.WikiApiClient.get_most_viewed_for_month">get_most_viewed_for_month</a></code></li>
+<li><code><a title="wiki_api.client.WikiApiClient.get_most_viewed_for_week" href="#wiki_api.client.WikiApiClient.get_most_viewed_for_week">get_most_viewed_for_week</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
